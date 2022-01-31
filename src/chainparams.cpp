@@ -120,8 +120,8 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("denis.ga");
-        vSeeds.emplace_back("176.102.66.53");
+        vSeeds.emplace_back("192.168.1.45");
+        vSeeds.emplace_back("192.168.1.23");
         //vSeeds.emplace_back("dnsseed.gyarabiumtools.com");
         //vSeeds.emplace_back("dnsseed.gyarabiumpool.org");
 
@@ -210,8 +210,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("denis.ga");
-        vSeeds.emplace_back("176.102.66.53");
+        vSeeds.emplace_back("192.168.1.45");
+        vSeeds.emplace_back("192.168.1.23");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
@@ -251,7 +251,7 @@ public:
         consensus.nSubsidyHalvingInterval = 150;
         consensus.BIP16Height = 1;
         consensus.BIP34Height = 1; // BIP34 activated on regtest (Used in functional tests)
-        consensus.BIP34Hash = uint256("0x7f7ff1efa3c43640a75c4976b7080cbcf64854465a2ee76582121391198d0a59");
+        consensus.BIP34Hash = uint256();
         consensus.BIP65Height = 1; // BIP65 activated on regtest (Used in functional tests)
         consensus.BIP66Height = 1; // BIP66 activated on regtest (Used in functional tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
